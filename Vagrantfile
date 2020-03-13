@@ -10,7 +10,12 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "kali" do |subconfig|
     subconfig.vm.box = "offensive-security/kali-linux"
+    subconfig.vm.box = "kalilinux/rolling"
     subconfig.vm.network "public_network"
   end
-
+  
+  config.vm.define "centos2" do |subconfig|
+   subconfig.vm.box = "centos/7"
+   subconfig.vm.network "public_network"
+  end
 end
